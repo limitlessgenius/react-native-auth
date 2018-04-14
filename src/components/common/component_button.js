@@ -40,8 +40,6 @@ const styles = {
 
 export { Button }
 
-
-
 //Comprehensive Selectiveness · On Learning · Purposeful Eclective Modularity
-
+//Doing work of a component in a file then refactor to a reusable component practice. 
 

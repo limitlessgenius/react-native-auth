@@ -1,38 +1,42 @@
 
-
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
-
-import { CardSection, Button } from './common'
-
-// console.log('IMPORTS', CardSection, Button)
+import { View, TextInput } from 'react-native'
+import { CardSection, Button, Card } from './common'
 
 class LoginForm extends Component {
 
 	render() {
 		return(
-			<View>
+			<Card>
 					
-
 				<CardSection>
-					<Text>E-MAIL INPUT</Text>
+					<TextInput 
+						style={styles.inputStyle}
+					/>
 				</CardSection>
 
 				<CardSection>
-					<Text>PASSWORD INPUT</Text>
+					<TextInput 
+						style={styles.inputStyle}
+					/>
 				</CardSection>
 
 				<CardSection>
 					<Button>LOGIN</Button>
 				</CardSection>
 
-
-			</View>
+			</Card>
 		)
 	}
 }
 
-export default LoginForm
+const styles = {
+	inputStyle: {
+		alignSelf: 'stretch', 
+		heigth: 20
+	}
+}
 
+export default LoginForm
 
 

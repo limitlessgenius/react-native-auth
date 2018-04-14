@@ -22,9 +22,7 @@ class App extends Component {
 		return(
 			<View>
 				<Header headerTitle="Auth App"/>
-				<Card>
-					<LoginForm />
-				</Card>
+				<LoginForm />
 			</View>
 		)
 	}
