@@ -1,7 +1,5 @@
 
 
-
-
 export * from './component_header'
 export * from './component_button'
 export * from './component_card'

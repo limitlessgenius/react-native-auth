@@ -1,12 +1,9 @@
 
-
-
 import React from 'react'
 import { TextInput, Text, View } from 'react-native'
 
 
 const Input = ({ label, value, onChangeText }) => {
-
 	const { inputStyle, labelStyle, containerStyle } = styles
 
 	return(
@@ -28,8 +25,7 @@ const styles = {
 		paddingLeft: 5, 
 		fontSize: 18, 
 		lineHeight: 23, 
-		flex: 2, 
-		// 2 + 1 = 3 = 2/3 between siblings of total available space
+		flex: 2, // 2 + 1 = 3 = 2/3 between siblings of total available space
 	}, 
 	labelStyle: {
 		fontSize: 18, 
@@ -38,8 +34,7 @@ const styles = {
 	}, 
 	containerStyle: {
 		height: 40, 
-		flex: 1, 
-		//all available space
+		flex: 1, //all available space
 		flexDirection: 'row', 
 		alignItems: 'center',  
 	}

@@ -12,21 +12,17 @@ class LoginForm extends Component {
 		}
 	}
 
-	// onEmailChangeHandler(email) {
-	// 	this.setState({ email }, () => console.log('EMAIL', this.state.email))
-	// }
-
-	// onPasswordChangeHandler(password) {
-	// 	this.setState({ password }, () => console.log('PASSWORD', this.state.password))
-	// }
-
 	render() {
+
+		const emailLabel = "Email"
+		const passwordLabel = "Password"
+
 		return(
 			<Card>
 					
 				<CardSection>
 					<Input 
-						label="Email"
+						label={labelName}
 						onChangeText={email => this.setState({ email })}
 						value={this.state.email}
 					/>
