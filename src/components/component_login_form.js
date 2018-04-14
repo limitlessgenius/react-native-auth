@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
-import { TextInput } from 'react-native'
-import { CardSection, Button, Card } from './common'
+import { CardSection, Button, Card, Input } from './common'
 
 class LoginForm extends Component {
 
@@ -13,13 +12,13 @@ class LoginForm extends Component {
 		}
 	}
 
-	onEmailChangeHandler(email) {
-		this.setState({ email })
-	}
+	// onEmailChangeHandler(email) {
+	// 	this.setState({ email }, () => console.log('EMAIL', this.state.email))
+	// }
 
-	onPasswordChangeHandler(password) {
-		this.setState({ password })
-	}
+	// onPasswordChangeHandler(password) {
+	// 	this.setState({ password }, () => console.log('PASSWORD', this.state.password))
+	// }
 
 	render() {
 		const { inputStyle } = styles	
@@ -27,20 +26,13 @@ class LoginForm extends Component {
 			<Card>
 					
 				<CardSection>
-					<TextInput 
-						style={inputStyle}
-						onChangeText={(text) => this.onEmailChangeHandler(text)}
+					<Input 
+						onChangeText={text => this.setState({ email })}
 						value={this.state.email}
 					/>
 				</CardSection>
 
-				<CardSection>
-					<TextInput 
-						style={inputStyle}
-						onChangeText={(text) => this.onPasswordChangeHandler(text)}
-						value={this.state.password}
-					/>
-				</CardSection>
+				<CardSection></CardSection>
 
 				<CardSection>
 					<Button>LOGIN</Button>
@@ -48,13 +40,6 @@ class LoginForm extends Component {
 
 			</Card>
 		)
-	}
-}
-
-const styles = {
-	inputStyle: {
-		alignSelf: 'stretch', 
-		height: 25
 	}
 }
 
