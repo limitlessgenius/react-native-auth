@@ -3,7 +3,7 @@ import React from 'react'
 import { TextInput, Text, View } from 'react-native'
 
 
-const Input = ({ label, placeholder, value, onChangeText }) => {
+const Input = ({ label, placeholder, value, onChangeText, secureTextEntry }) => {
 	const { inputStyle, labelStyle, containerStyle } = styles
 
 	return(
@@ -15,10 +15,12 @@ const Input = ({ label, placeholder, value, onChangeText }) => {
 				onChangeText={onChangeText}
 				style={inputStyle}
 				autocorrect={false}
+				secureTextEntry={secureTextEntry}
 			/>
 		</View>
 	)
 }
+//reusable components is simply to define as a modular function; same principle and understanding
 
 const styles = {
 	inputStyle: {
