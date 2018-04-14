@@ -14,21 +14,26 @@ class LoginForm extends Component {
 
 	render() {
 
-		const emailLabel = "Email"
-		const passwordLabel = "Password"
-
 		return(
 			<Card>
 					
 				<CardSection>
 					<Input 
-						label={labelName}
+						label="Email"
+						placeholder="user@gmail.com"
 						onChangeText={email => this.setState({ email })}
 						value={this.state.email}
 					/>
 				</CardSection>
 
-				<CardSection></CardSection>
+				<CardSection>
+					<Input 
+						label="Password"
+						placeholder="*****"
+						onChangeText={password => this.setState({ password })}
+						value={this.state.password}
+					/>
+				</CardSection>
 
 				<CardSection>
 					<Button>LOGIN</Button>
