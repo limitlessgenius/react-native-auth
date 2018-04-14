@@ -12,7 +12,21 @@ class LoginForm extends Component {
 	render() {
 		return(
 			<View>
-				<Text>Login Form</Text>
+					
+
+				<CardSection>
+					<Text>E-MAIL INPUT</Text>
+				</CardSection>
+
+				<CardSection>
+					<Text>PASSWORD INPUT</Text>
+				</CardSection>
+
+				<CardSection>
+					<Button>LOGIN</Button>
+				</CardSection>
+
+
 			</View>
 		)
 	}
