@@ -21,12 +21,12 @@ class LoginForm extends Component {
 	// }
 
 	render() {
-		const { inputStyle } = styles	
 		return(
 			<Card>
 					
 				<CardSection>
 					<Input 
+						label="Email"
 						onChangeText={text => this.setState({ email })}
 						value={this.state.email}
 					/>
