@@ -25,16 +25,30 @@ class LoginForm extends Component {
 		}) 
 
 		firebase.auth().signInWithEmailAndPassword(email, password)
-			.then(() => this.setState({ loading: false }))
+			.then(this.onLoginSuccess.bind(this))
 			.catch(() => { //Requires at least 6 char long password
 				firebase.auth().createUserWithEmailAndPassword(email, password)
-					.catch(() => {
-						this.setState({ 
-							error: 'Authentication failed.',
-							loading: false
-						})
-					})
+					.then(this.onLoginSuccess.bind(this))
+					.catch(this.onLoginFail.bind(this))
+					//because it is in a promise; after an amount of time; we don't
+					//know the context
 			})
+	}
+
+	onLoginSuccess() {
+		this.setState({
+			email: '', 
+			password: '', 
+			loading: false, 
+			error: ''
+		})
+	}
+
+	onLoginFail() {
+		this.setState({
+			error: 'Authentication failed.',
+			loading: false
+		})
 	}
 
 	renderButton() {
@@ -44,6 +58,7 @@ class LoginForm extends Component {
 			)
 		}
 		//render method that returns some amount of JSX
+		//bind(this) because
 		return (
 			<Button 
 				style={{color: this.state.loading}}
