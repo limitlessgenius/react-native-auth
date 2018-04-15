@@ -3,10 +3,10 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const Card = (props) => {
+const Card = ({children}) => {
 	return (
 		<View style={styles.containerStyle}>
-			{props.children}
+			{children}
 		</View>
 	)
 }
@@ -29,6 +29,9 @@ const styles = {
 }
 
 export { Card }
+
+//Doubts: don't know why login is necessary to null
+//and why button needs to be wrapped up in card
 
 
 

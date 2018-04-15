@@ -11,7 +11,6 @@ const Button = ({ onPress, children }) => {
 			onPress={onPress}
 			style={buttonStyle}>
 			<Text style={textStyle}>
-				{console.log('TEXT BUTTON', children)}
 				{children}
 			</Text>
 		</TouchableOpacity>
